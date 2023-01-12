@@ -11,7 +11,7 @@ public class BaseTest {
     WebDriver driver;
 
     public WebDriver openBrowser(String browser){
-        System.setProperty("webdriver.chrome.driver", "C:\\Users\\duc.vm4\\IdeaProjects\\KiotViet\\BuildPath\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"\\target\\chromedriver.exe");
         switch (browser){
             case "firefox":{
                 driver = new FirefoxDriver();
