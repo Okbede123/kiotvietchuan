@@ -2,7 +2,7 @@ package org.example.InterfaceUI;
 
 public class HomePageUI {
 
-    public static final String LOGIN_HOME_LOCATOR = "xpath=//a[text() = 'Đăng nhập']";
+    public static final String LOGIN_HOME_LOCATOR = "xpath=//a[@class = 'btn btn-primary btn-sm']";
 
     public static final String POPUP_LOGIN_LOCATOR = "xpath=//div[@class = 'desktop popup-login-content']";
 
