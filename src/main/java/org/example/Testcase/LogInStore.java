@@ -3,7 +3,7 @@ package org.example.Testcase;
 
 
 import org.example.actions.PageObject.*;
-import org.example.cores.commons.BaseTest;
+import org.example.cores.Commons.BaseTest;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;

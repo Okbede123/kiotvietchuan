@@ -1,8 +1,8 @@
 package org.example.actions.PageObject;
 
 
-import org.example.cores.commons.BasePage;
-import org.example.interfaceUI.TikTokPageUI;
+import org.example.cores.Commons.BasePage;
+import org.example.InterfaceUI.TikTokPageUI;
 import org.openqa.selenium.WebDriver;
 
 public class TikTokPageObject extends BasePage {

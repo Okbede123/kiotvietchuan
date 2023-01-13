@@ -1,7 +1,7 @@
 package org.example.actions.PageObject;
 
-import org.example.cores.commons.BasePage;
-import org.example.interfaceUI.TikTokPageLoginUI;
+import org.example.cores.Commons.BasePage;
+import org.example.InterfaceUI.TikTokPageLoginUI;
 import org.openqa.selenium.WebDriver;
 
 public class TikTokLoginPageObject extends BasePage {

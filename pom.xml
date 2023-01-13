@@ -7,7 +7,6 @@
     <groupId>org.example</groupId>
     <artifactId>testkiotviet</artifactId>
     <version>1.0-SNAPSHOT</version>
-
     <dependencies>
         <!-- https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java -->
         <dependency>
@@ -15,16 +14,12 @@
             <artifactId>selenium-java</artifactId>
             <version>4.7.2</version>
         </dependency>
-
         <!-- https://mvnrepository.com/artifact/org.testng/testng -->
         <dependency>
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
             <version>7.4.0</version>
-            <scope>test</scope>
         </dependency>
-
-
     </dependencies>
 
     <properties>

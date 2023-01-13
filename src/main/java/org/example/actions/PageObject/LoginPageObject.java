@@ -1,9 +1,9 @@
 package org.example.actions.PageObject;
 
 
-import org.example.cores.commons.BasePage;
-import org.example.cores.commons.GlobalConstant;
-import org.example.interfaceUI.LoginPageUI;
+import org.example.cores.Commons.BasePage;
+import org.example.cores.Commons.GlobalConstant;
+import org.example.InterfaceUI.LoginPageUI;
 import org.openqa.selenium.WebDriver;
 
 public class LoginPageObject extends BasePage {

@@ -1,8 +1,8 @@
 package org.example.actions.PageObject;
 
 
-import org.example.cores.commons.BasePage;
-import org.example.interfaceUI.PosOnlineUI;
+import org.example.cores.Commons.BasePage;
+import org.example.InterfaceUI.PosOnlineUI;
 import org.openqa.selenium.WebDriver;
 
 import java.util.Set;
