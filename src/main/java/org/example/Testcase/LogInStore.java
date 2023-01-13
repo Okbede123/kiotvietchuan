@@ -61,6 +61,8 @@ public class LogInStore extends BaseTest {
         tikTokLoginPageObject.sendEmailTextBox("yuanxing.thm+0018@bytedance.com");
         tikTokLoginPageObject.sendPassTextBox("a123456!");
         tikTokLoginPageObject.clickLogin();
+
+
     }
 
 }
