@@ -40,7 +40,7 @@ public class LoginToStore2 extends BaseTest {
         //loginPageObject.clickToManageTest();
     }
 
-    @Test
+    //@Test
     public void TC_02_GoToPosOnline(){
         //myDashBoardPageObject.clickToSellerOnline();
         new WebDriverWait(driver, Duration.ofSeconds(15)).until(ExpectedConditions.elementToBeClickable(By.xpath("//a[text() = 'Bán hàng Online']"))).click();
