@@ -37,7 +37,7 @@ public class LoginToStore2 extends BaseTest {
 
     @Test
     public void TC_02_GoToPosOnline(){
-        posOnlineObject = myDashBoardPageObject.clickToSellerOnline();
+        myDashBoardPageObject.clickToSellerOnline();
 //        verifyTrue(posOnlineObject.isPosOnlinePageObject());
 //        posOnlineObject.checkFBPosDisplay();
 //        posOnlineObject.clickToSetting();
