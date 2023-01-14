@@ -28,7 +28,7 @@ public class HomePageObject extends BasePage {
 
     public LoginPageObject clickToStore(){
         clickToElement(HomePageUI.GO_TO_STORE);
-        return new PageGeneralManager().openLoginPage(driver);
+        return PageGeneralManager.openLoginPage(driver);
     }
 
 

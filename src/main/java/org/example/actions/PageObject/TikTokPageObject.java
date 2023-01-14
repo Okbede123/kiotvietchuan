@@ -45,6 +45,6 @@ public class TikTokPageObject extends BasePage {
         }
 
 
-        return new PageGeneralManager().openLoginTikTokSeller(driver);
+        return PageGeneralManager.openLoginTikTokSeller(driver);
     }
 }

@@ -27,7 +27,7 @@ public class LoginPageObject extends BasePage {
 
     public MyDashBoardPageObject clickToManage(){
         clickToElement(LoginPageUI.GO_TO_MANAGE);
-        return new PageGeneralManager().openMyDashBoard(driver);
+        return PageGeneralManager.openMyDashBoard(driver);
     }
 
     public void clickToManageTest(){

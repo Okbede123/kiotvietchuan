@@ -5,7 +5,6 @@ import org.openqa.selenium.WebDriver;
 public class PageGeneralManager  {
 
 
-
     public static HomePageObject openHomePage(WebDriver driver){
         return new HomePageObject(driver);
     }
