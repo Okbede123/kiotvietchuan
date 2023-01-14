@@ -2,6 +2,7 @@ package org.example.Testcase;
 
 import org.example.actions.PageObject.*;
 import org.example.cores.Commons.BaseTest;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -37,7 +38,8 @@ public class LoginToStore2 extends BaseTest {
 
     @Test
     public void TC_02_GoToPosOnline(){
-        myDashBoardPageObject.clickToSellerOnline();
+        //myDashBoardPageObject.clickToSellerOnline();
+        driver.findElement(By.xpath("//a[text() = 'Bán hàng Online']")).click();
 //        verifyTrue(posOnlineObject.isPosOnlinePageObject());
 //        posOnlineObject.checkFBPosDisplay();
 //        posOnlineObject.clickToSetting();
