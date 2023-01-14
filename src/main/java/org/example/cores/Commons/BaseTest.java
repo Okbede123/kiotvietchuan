@@ -62,7 +62,6 @@ public class BaseTest {
             }
         }
         nameBrowser = browser;
-        driver.manage().window().maximize();
         return driver;
     }
 

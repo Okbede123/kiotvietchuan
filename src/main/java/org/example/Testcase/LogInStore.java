@@ -26,6 +26,7 @@ public class LogInStore extends BaseTest {
     @BeforeClass
     public void BeforeClass(String browserName){
         driver = openBrowser(browserName);
+        driver.manage().window().maximize();
        homePageObject = PageGeneralManager.openHomePage(driver);
        homePageObject.getURl();
     }
