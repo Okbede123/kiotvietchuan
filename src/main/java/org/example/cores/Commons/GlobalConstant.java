@@ -9,4 +9,6 @@ public class GlobalConstant {
     public static final String USERNAME_STORE = "admin";
 
     public static final String LINK_URL = "https://www.kiotviet.vn/";
+
+    public static final String LINK_URL_STORE = "https://testz1.kiotviet.vn/";
 }

@@ -15,6 +15,11 @@ public class LoginPageObject extends BasePage {
         this.driver = driver;
     }
 
+    public void getToSellerUrl(){
+        openUrl(GlobalConstant.LINK_URL_STORE);
+        openFullScreen();
+    }
+
     public void sendUserNameandPassWord(){
         sendKey(LoginPageUI.NAME_USER_LOCATOR, GlobalConstant.USERNAME_STORE);
         sendKey(LoginPageUI.PASS_USER_LOCATOR,GlobalConstant.PASSWORD_STORE);
