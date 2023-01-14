@@ -22,7 +22,7 @@ public class LogInStore extends BaseTest {
 
     @BeforeClass
     public void BeforeClass(){
-        driver = openBrowser("chrome");
+        driver = openBrowser("firefox");
        homePageObject = PageGeneralManager.openHomePage(driver);
         homePageObject.getURl();
     }

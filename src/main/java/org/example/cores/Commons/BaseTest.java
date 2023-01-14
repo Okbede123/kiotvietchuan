@@ -9,9 +9,10 @@ import org.testng.Assert;
 public class BaseTest {
 
     WebDriver driver;
+    private static String nameBrowser;
 
     public WebDriver openBrowser(String browser){
-        //System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"\\src\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"\\src\\chromedriver.exe");
         switch (browser){
             case "firefox":{
                 driver = new FirefoxDriver();
@@ -29,8 +30,13 @@ public class BaseTest {
                 throw new RuntimeException("not found driver");
             }
         }
+        nameBrowser = browser;
         driver.manage().window().maximize();
         return driver;
+    }
+
+    public static String getNameBrowser(){
+        return nameBrowser;
     }
 
 

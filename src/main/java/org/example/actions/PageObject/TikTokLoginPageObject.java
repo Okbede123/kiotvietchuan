@@ -2,6 +2,7 @@ package org.example.actions.PageObject;
 
 import org.example.cores.Commons.BasePage;
 import org.example.InterfaceUI.TikTokPageLoginUI;
+import org.example.cores.Commons.BaseTest;
 import org.openqa.selenium.WebDriver;
 
 public class TikTokLoginPageObject extends BasePage {
@@ -17,13 +18,25 @@ public class TikTokLoginPageObject extends BasePage {
     }
 
     public void sendEmailTextBox(String values){
-        waitElementVisibility(TikTokPageLoginUI.TEXTBOX_EMAIL);
-        sendKey(TikTokPageLoginUI.TEXTBOX_EMAIL,values);
+        if(BaseTest.getNameBrowser().equals("firefox")){
+            waitElementVisibility(TikTokPageLoginUI.TEXTBOX_EMAIL_FIREFOX);
+            sendKey(TikTokPageLoginUI.TEXTBOX_EMAIL_FIREFOX,values);
+        }
+        else {
+            waitElementVisibility(TikTokPageLoginUI.TEXTBOX_EMAIL_CHROME);
+            sendKey(TikTokPageLoginUI.TEXTBOX_EMAIL_CHROME,values);
+        }
     }
 
     public void sendPassTextBox(String values){
-        waitElementVisibility(TikTokPageLoginUI.TEXTBOX_PASSWORD);
-        sendKey(TikTokPageLoginUI.TEXTBOX_PASSWORD,values);
+        if(BaseTest.getNameBrowser().equals("firefox")){
+            waitElementVisibility(TikTokPageLoginUI.TEXTBOX_PASSWORD_FIREFOX);
+            sendKey(TikTokPageLoginUI.TEXTBOX_PASSWORD_FIREFOX,values);
+        }
+        else {
+            waitElementVisibility(TikTokPageLoginUI.TEXTBOX_PASSWORD_CHROME);
+            sendKey(TikTokPageLoginUI.TEXTBOX_PASSWORD_CHROME,values);
+        }
     }
 
     public void clickLogin(){
