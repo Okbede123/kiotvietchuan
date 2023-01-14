@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Tech Panda]" verbose="0">
+  <test thread-count="5" name="Run On Chrome(failed)" verbose="0">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="org.example.Testcase.LoginToStore2">
+        <methods>
+          <include name="TC_02_GoToPosOnline"/>
+          <include name="afterClass"/>
+          <include name="BeforeClass"/>
+        </methods>
+      </class> <!-- org.example.Testcase.LoginToStore2 -->
+    </classes>
+  </test> <!-- Run On Chrome(failed) -->
+</suite> <!-- Failed suite [Tech Panda] -->
