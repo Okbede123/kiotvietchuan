@@ -29,4 +29,8 @@ public class LoginPageObject extends BasePage {
         clickToElement(LoginPageUI.GO_TO_MANAGE);
         return new PageGeneralManager().openMyDashBoard(driver);
     }
+
+    public void clickToManageTest(){
+        clickToElement(LoginPageUI.GO_TO_MANAGE);
+    }
 }
