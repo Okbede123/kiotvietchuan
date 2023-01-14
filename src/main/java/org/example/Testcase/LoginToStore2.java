@@ -37,14 +37,13 @@ public class LoginToStore2 extends BaseTest {
     public void TC_01_getUserNameAndPass(){
         loginPageObject.sendUserNameandPassWord();
         new WebDriverWait(driver, Duration.ofSeconds(15)).until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@value = 'Quản lý']"))).click();
-        waitInTime(1);
         //loginPageObject.clickToManageTest();
     }
 
     @Test
     public void TC_02_GoToPosOnline(){
         //myDashBoardPageObject.clickToSellerOnline();
-        new WebDriverWait(driver, Duration.ofSeconds(15)).until(ExpectedConditions.elementToBeClickable(By.xpath("//a[text() = 'Bán hàng Online']"))).click();
+        new WebDriverWait(driver, Duration.ofSeconds(15)).until(ExpectedConditions.elementToBeClickable(By.xpath("//a[text() = 'Sổ quỹ']"))).click();
 //        verifyTrue(posOnlineObject.isPosOnlinePageObject());
 //        posOnlineObject.checkFBPosDisplay();
 //        posOnlineObject.clickToSetting();
