@@ -30,7 +30,7 @@ public class LoginToStore2 extends BaseTest {
     public void BeforeClass(String browserName){
         driver = openBrowser(browserName);
         loginPageObject = PageGeneralManager.openLoginPage(driver);
-        loginPageObject.getToSellerUrl();
+
     }
 
     @Test

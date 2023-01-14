@@ -61,7 +61,8 @@ public class BaseTest {
                 throw new RuntimeException("not found driver");
             }
         }
-        //driver.manage().window().maximize();
+        driver.manage().window().maximize();
+        driver.get(GlobalConstant.LINK_URL_STORE);
         nameBrowser = browser;
         return driver;
     }
