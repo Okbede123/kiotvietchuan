@@ -7,6 +7,9 @@ import org.openqa.selenium.WebDriver;
 
 public class TikTokLoginPageObject extends BasePage {
     WebDriver driver;
+    Object CHROME;
+    Object FIREFOX;
+    Object EDGE;
     public TikTokLoginPageObject(WebDriver driver) {
         super(driver);
         this.driver = driver;
@@ -26,6 +29,8 @@ public class TikTokLoginPageObject extends BasePage {
             waitElementVisibility(TikTokPageLoginUI.TEXTBOX_EMAIL_CHROME);
             sendKey(TikTokPageLoginUI.TEXTBOX_EMAIL_CHROME,values);
         }
+
+
     }
 
     public void sendPassTextBox(String values){
@@ -37,6 +42,8 @@ public class TikTokLoginPageObject extends BasePage {
             waitElementVisibility(TikTokPageLoginUI.TEXTBOX_PASSWORD_CHROME);
             sendKey(TikTokPageLoginUI.TEXTBOX_PASSWORD_CHROME,values);
         }
+
+
     }
 
     public void clickLogin(){

@@ -8,8 +8,39 @@ import org.testng.Assert;
 
 public class BaseTest {
 
+    public enum switchPage{
+        CHROME,FIREFOX,EDGE
+    }
+
     WebDriver driver;
     private static String nameBrowser;
+
+    //private static Object nameBrowserEnum;
+
+    public  WebDriver openBrowserEnum(switchPage page){
+        System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"\\src\\chromedriver.exe");
+        switch (page){
+            case FIREFOX:{
+                driver = new FirefoxDriver();
+                break;
+            }
+            case CHROME:{
+                driver = new ChromeDriver();
+                break;
+            }
+            case EDGE:{
+                driver = new EdgeDriver();
+                break;
+            }
+            default:{
+                throw new RuntimeException("not found driver");
+            }
+        }
+        //nameBrowserEnum = page;
+        //System.out.println(nameBrowserEnum);
+        driver.manage().window().maximize();
+        return driver;
+    }
 
     public WebDriver openBrowser(String browser){
         System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"\\src\\chromedriver.exe");

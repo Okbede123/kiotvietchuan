@@ -29,7 +29,7 @@ public class MyDashBoardPageObject extends BasePage {
     }
 
     public PosOnlineObject clickToSellerOnline(){
-        waitElementClick(MyDashBoardUI.SELLER_ONLINE_LOCATOR);
+        //waitElementClick(MyDashBoardUI.SELLER_ONLINE_LOCATOR);
         clickToElement(MyDashBoardUI.SELLER_ONLINE_LOCATOR);
         return PageGeneralManager.openPosOnline(driver);
     }

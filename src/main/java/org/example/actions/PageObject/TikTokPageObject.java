@@ -32,7 +32,6 @@ public class TikTokPageObject extends BasePage {
             clickToElement(TikTokPageUI.CLICK_TO_NEXT_CHROME);
         }
 
-
     }
 
     public TikTokLoginPageObject clicktoLoginTikTokSeller(){
@@ -44,6 +43,8 @@ public class TikTokPageObject extends BasePage {
             waitElementClicks(TikTokPageUI.LOGIN_TIKTOKSELLER_CHROME);
             clickToElement(TikTokPageUI.LOGIN_TIKTOKSELLER_CHROME);
         }
+
+
         return new PageGeneralManager().openLoginTikTokSeller(driver);
     }
 }
