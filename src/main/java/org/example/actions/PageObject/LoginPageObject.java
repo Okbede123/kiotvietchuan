@@ -16,8 +16,8 @@ public class LoginPageObject extends BasePage {
     }
 
     public void getToSellerUrl(){
-        openUrl(GlobalConstant.LINK_URL_STORE);
         openFullScreen();
+        openUrl(GlobalConstant.LINK_URL_STORE);
     }
 
     public void sendUserNameandPassWord(){
