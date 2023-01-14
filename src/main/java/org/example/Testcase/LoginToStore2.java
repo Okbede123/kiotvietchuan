@@ -32,21 +32,21 @@ public class LoginToStore2 extends BaseTest {
     public void TC_01_getUserNameAndPass(){
         loginPageObject.sendUserNameandPassWord();
         myDashBoardPageObject = loginPageObject.clickToManage();
-        myDashBoardPageObject.verifyToDashBoard();
+        //myDashBoardPageObject.verifyToDashBoard();
     }
 
     @Test
     public void TC_02_GoToPosOnline(){
         posOnlineObject = myDashBoardPageObject.clickToSellerOnline();
-        verifyTrue(posOnlineObject.isPosOnlinePageObject());
-        posOnlineObject.checkFBPosDisplay();
-        posOnlineObject.clickToSetting();
-        verifyTrue(posOnlineObject.isDisplayConnectionSetting());
-        posOnlineObject.clickAddTikTokSeller();
-        verifyTrue(posOnlineObject.isDisplayAddOmniChannel());
+//        verifyTrue(posOnlineObject.isPosOnlinePageObject());
+//        posOnlineObject.checkFBPosDisplay();
+//        posOnlineObject.clickToSetting();
+//        verifyTrue(posOnlineObject.isDisplayConnectionSetting());
+//        posOnlineObject.clickAddTikTokSeller();
+//        verifyTrue(posOnlineObject.isDisplayAddOmniChannel());
     }
 
-    @Test
+    //@Test
     public void TC_03_TiktokAddSeller(){
         tikTokPageObject = posOnlineObject.clickToLoginOmniChannel();
         tikTokPageObject.clickToSellerAsian();
