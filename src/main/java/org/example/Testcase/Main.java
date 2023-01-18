@@ -21,18 +21,22 @@ public class Main {
 
     @BeforeClass
     public void BeforeClass(){
-        //System.setProperty(khoiTaoDriver.khoiTaoChomre,khoiTaoDriver.getProperty+khoiTaoDriver.source);
+
         driver = new ChromeDriver();
-        //driver = new ChromeDriver();
-        webDriverWait = new WebDriverWait(driver, Duration.ofSeconds(15));
-        driver.get("https://www.facebook.com/");
+        driver.get("https://www.google.com/");
+
     }
 
     @Test
-    public void TC_01_Visible(){
-        //Visible: có trên UI và có trong DOM/HTML
-        webDriverWait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("input#email")));
-        Assert.assertTrue(driver.findElement(By.cssSelector("input#email")).isDisplayed());
+    public void TC_01_Test(){
+        getResult("//input[@title = 'Tìm kiếm']","ok","be","de");
+    }
+
+
+    public void getResult(String element,String... values){
+        for (String value:values) {
+            driver.findElement(By.xpath(element)).sendKeys(value);
+        }
     }
 
 

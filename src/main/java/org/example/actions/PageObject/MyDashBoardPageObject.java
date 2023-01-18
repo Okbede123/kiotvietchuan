@@ -34,4 +34,8 @@ public class MyDashBoardPageObject extends BasePage {
         return PageGeneralManager.openPosOnline(driver);
     }
 
+//    public ProductPageObject clickToCreateProducts(){
+//        clickToElement();
+//    }
+
 }

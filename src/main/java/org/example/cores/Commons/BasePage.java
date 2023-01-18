@@ -29,6 +29,10 @@ public class BasePage extends BasePageDefault {
         searchElement(locator).click();
     }
 
+//    public String castString(String value){
+//        return String.format(value)
+//    }
+
 
     @Override
    public void sendKey(String locator, String value) {

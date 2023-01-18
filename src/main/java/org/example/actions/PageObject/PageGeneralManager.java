@@ -28,4 +28,8 @@ public class PageGeneralManager  {
     public static TikTokLoginPageObject openLoginTikTokSeller(WebDriver driver){
         return  new TikTokLoginPageObject(driver);
     }
+
+    public static ProductPageObject openCreateProduct(WebDriver driver){
+        return new ProductPageObject(driver);
+    }
 }
