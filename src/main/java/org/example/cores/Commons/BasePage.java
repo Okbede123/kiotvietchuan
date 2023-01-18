@@ -47,6 +47,11 @@ public class BasePage extends BasePageDefault {
        return driver.findElement(getByLocator(locator));
     }
 
+    public WebElement searchElementStringFormat(String locator,String value){
+        String fusion = String.format(locator,value);
+        return driver.findElement(getByLocator(fusion));
+    }
+
 
 
     @Override
