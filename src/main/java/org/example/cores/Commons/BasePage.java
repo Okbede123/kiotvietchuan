@@ -1,9 +1,11 @@
 package org.example.cores.Commons;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Cookie;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
@@ -29,9 +31,6 @@ public class BasePage extends BasePageDefault {
         searchElement(locator).click();
     }
 
-//    public String castString(String value){
-//        return String.format(value)
-//    }
 
 
     @Override
@@ -42,15 +41,33 @@ public class BasePage extends BasePageDefault {
         element.sendKeys(value);
     }
 
+    public void sendKeyUpload(String locator, String value) {
+        WebElement element = searchElement(locator);
+        element.sendKeys(value);
+
+    }
+
     @Override
     public WebElement searchElement(String locator) {
        return driver.findElement(getByLocator(locator));
     }
 
-    public WebElement searchElementStringFormat(String locator,String value){
-        String fusion = String.format(locator,value);
-        return driver.findElement(getByLocator(fusion));
+    public String castString(String locator,String value){
+        return locator = String.format(locator,value);
     }
+
+    public void clickStringFormat(String locator,String value){
+        clickToElement(castString(locator,value));
+    }
+
+    public void sendKeyStringFormat(String locator,String value,String valueSendkey){
+        sendKey(castString(locator,value),valueSendkey);
+    }
+
+    public void selectDropDown(String locator,String valueString,String value){
+        new Select(searchElement(castString(locator,valueString))).selectByVisibleText(value);
+    }
+
 
 
 
@@ -195,10 +212,30 @@ public class BasePage extends BasePageDefault {
         return locator;
     }
 
-    public void clickToElements(String locator,String values){
-        System.out.println(castRestParameter(locator,values));
+    public void clickToElementsStringFormat(String locator, String values){
         searchElement(castRestParameter(locator,values)).click();
 
+    }
+
+    public Set<Cookie> getCookiesLogin(){
+        System.out.println(driver.manage().getCookies());
+        return driver.manage().getCookies();
+    }
+
+    public void addCookieLogin(Set<Cookie> cookies){
+        sleepInTime(1);
+        for (Cookie cookie:cookies) {
+            driver.manage().addCookie(cookie);
+        }
+        driver.navigate().refresh();
+    }
+
+    public void sleepInTime(int time){
+        try {
+            Thread.sleep(time*1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
     }
 
 }

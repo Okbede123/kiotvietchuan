@@ -28,14 +28,17 @@ public class MyDashBoardPageObject extends BasePage {
         return status;
     }
 
+
     public PosOnlineObject clickToSellerOnline(){
         //waitElementClick(MyDashBoardUI.SELLER_ONLINE_LOCATOR);
         clickToElement(MyDashBoardUI.SELLER_ONLINE_LOCATOR);
         return PageGeneralManager.openPosOnline(driver);
     }
 
-//    public ProductPageObject clickToCreateProducts(){
-//        clickToElement();
-//    }
+    public ProductPageObject clickToCreateProducts(){
+        clickStringFormat(MyDashBoardUI.ITEMS_LOCATOR_HEADER,"Hàng hóa");
+        clickStringFormat(MyDashBoardUI.ITEMS_MENU,"Danh mục");
+        return PageGeneralManager.openCreateProduct(driver);
+    }
 
 }

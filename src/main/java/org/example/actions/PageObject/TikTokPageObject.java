@@ -23,12 +23,12 @@ public class TikTokPageObject extends BasePage {
         switchToWindowTabs(TikTokPageUI.TIKTOKSELLER_TITLE);
         if(BaseTest.getNameBrowser().equals("firefox")){
             clickToElement(TikTokPageUI.CLICK_TO_ASIAN_SELLER_FIREFOX);
-            clickToElements(TikTokPageUI.CHOOSE_LOCATION_SELLER_ASIAN,"Việt Nam");
+            clickToElementsStringFormat(TikTokPageUI.CHOOSE_LOCATION_SELLER_ASIAN,"Việt Nam");
             clickToElement(TikTokPageUI.CLICK_TO_NEXT_FIREFOX);
         }
         else {
             clickToElement(TikTokPageUI.CLICK_TO_ASIAN_SELLER_CHROME);
-            clickToElements(TikTokPageUI.CHOOSE_LOCATION_SELLER_ASIAN,"Vietnam");
+            clickToElementsStringFormat(TikTokPageUI.CHOOSE_LOCATION_SELLER_ASIAN,"Vietnam");
             clickToElement(TikTokPageUI.CLICK_TO_NEXT_CHROME);
         }
 
@@ -43,7 +43,6 @@ public class TikTokPageObject extends BasePage {
             waitElementClicks(TikTokPageUI.LOGIN_TIKTOKSELLER_CHROME);
             clickToElement(TikTokPageUI.LOGIN_TIKTOKSELLER_CHROME);
         }
-
 
         return PageGeneralManager.openLoginTikTokSeller(driver);
     }

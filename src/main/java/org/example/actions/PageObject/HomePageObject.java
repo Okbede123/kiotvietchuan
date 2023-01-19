@@ -26,9 +26,18 @@ public class HomePageObject extends BasePage {
         openFullScreen();
     }
 
+    public void getURlSeller(){
+        openUrl(GlobalConstant.LINK_URL_STORE);
+        openFullScreen();
+    }
+
     public LoginPageObject clickToStore(){
         clickToElement(HomePageUI.GO_TO_STORE);
         return PageGeneralManager.openLoginPage(driver);
+    }
+
+    public MyDashBoardPageObject goToMyDashBoardCookie(){
+        return  PageGeneralManager.openMyDashBoard(driver);
     }
 
 

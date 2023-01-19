@@ -1,9 +1,6 @@
 package org.example.Testcase;
 
-import org.example.actions.PageObject.HomePageObject;
-import org.example.actions.PageObject.LoginPageObject;
-import org.example.actions.PageObject.MyDashBoardPageObject;
-import org.example.actions.PageObject.PageGeneralManager;
+import org.example.actions.PageObject.*;
 import org.example.cores.Commons.BaseTest;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.BeforeClass;
@@ -15,6 +12,7 @@ public class CreateItems extends BaseTest {
     HomePageObject homePageObject;
     LoginPageObject loginPageObject;
     MyDashBoardPageObject myDashBoardPageObject;
+    ProductPageObject productPageObject;
 
 
     @Parameters({"browser"})
@@ -29,12 +27,13 @@ public class CreateItems extends BaseTest {
         loginPageObject.sendUserNameandPassWord();
         myDashBoardPageObject = loginPageObject.clickToManage();
         myDashBoardPageObject.verifyToDashBoard();
-
-
     }
 
     @Test
     public void TC_01(){
+    productPageObject = myDashBoardPageObject.clickToCreateProducts();
+    productPageObject.clickToCreateHeader();
+    productPageObject.inputInformationItem();
 
     }
 }

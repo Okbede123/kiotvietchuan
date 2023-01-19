@@ -23,21 +23,19 @@ public class Main {
     public void BeforeClass(){
 
         driver = new ChromeDriver();
-        driver.get("https://www.google.com/");
+        driver.get("https://blueimp.github.io/jQuery-File-Upload/");
+        String test = System.getProperty("user.dir");
+        System.out.println(test);
 
     }
 
     @Test
     public void TC_01_Test(){
-        getResult("//input[@title = 'Tìm kiếm']","ok","be","de");
+        driver.findElement(By.xpath("//input[@type = 'file']")).sendKeys("C:\\SAVE\\unnamed.jpg");
     }
 
 
-    public void getResult(String element,String... values){
-        for (String value:values) {
-            driver.findElement(By.xpath(element)).sendKeys(value);
-        }
-    }
+
 
 
 }
