@@ -21,27 +21,23 @@ public class TikTokPageObject extends BasePage {
 
     public void clickToSellerAsian(){
         switchToWindowTabs(TikTokPageUI.TIKTOKSELLER_TITLE);
-        if(BaseTest.getNameBrowser().equals("firefox")){
-            clickToElement(TikTokPageUI.CLICK_TO_ASIAN_SELLER_FIREFOX);
+
+        if(isDisplayElement(TikTokPageUI.CLICK_TO_ASIAN_SELLER_VIETNAMESE)){
+            clickToElement(TikTokPageUI.CLICK_TO_ASIAN_SELLER_VIETNAMESE);
             clickToElementsStringFormat(TikTokPageUI.CHOOSE_LOCATION_SELLER_ASIAN,"Việt Nam");
             clickToElement(TikTokPageUI.CLICK_TO_NEXT_FIREFOX);
-        }
-        else {
-            clickToElement(TikTokPageUI.CLICK_TO_ASIAN_SELLER_CHROME);
+        } else if (isDisplayElement(TikTokPageUI.CLICK_TO_ASIAN_SELLER_ENGLISH)) {
+            clickToElement(TikTokPageUI.CLICK_TO_ASIAN_SELLER_ENGLISH);
             clickToElementsStringFormat(TikTokPageUI.CHOOSE_LOCATION_SELLER_ASIAN,"Vietnam");
             clickToElement(TikTokPageUI.CLICK_TO_NEXT_CHROME);
         }
-
     }
 
     public TikTokLoginPageObject clicktoLoginTikTokSeller(){
-        if(BaseTest.getNameBrowser().equals("firefox")){
-            waitElementClicks(TikTokPageUI.LOGIN_TIKTOKSELLER_FIREFOX);
-            clickToElement(TikTokPageUI.LOGIN_TIKTOKSELLER_FIREFOX);
-        }
-        else {
-            waitElementClicks(TikTokPageUI.LOGIN_TIKTOKSELLER_CHROME);
-            clickToElement(TikTokPageUI.LOGIN_TIKTOKSELLER_CHROME);
+        if(isDisplayElement(TikTokPageUI.LOGIN_TIKTOKSELLER_VIETNAM)){
+            clickToElement(TikTokPageUI.LOGIN_TIKTOKSELLER_VIETNAM);
+        } else if (isDisplayElement(TikTokPageUI.LOGIN_TIKTOKSELLER_ENGLISH)) {
+            clickToElement(TikTokPageUI.LOGIN_TIKTOKSELLER_ENGLISH);
         }
 
         return PageGeneralManager.openLoginTikTokSeller(driver);

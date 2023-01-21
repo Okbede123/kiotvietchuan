@@ -25,7 +25,8 @@ public class ProductPageObject extends BasePage {
     }
 
     public void inputInformationItem(){
-        sendKey(ProductPageUI.INPUT_NAME_ITEM,"okbede");
+        sendKey(ProductPageUI.INPUT_NAME_ITEM,"vietnam");
+        waitInTime(2);
         clickToElement(ProductPageUI.GROUP_ITEMS);
         clickStringFormat(ProductPageUI.CHOOSE_GROUP,"áo phao");
         clickToElement(ProductPageUI.TRADEMARK);
@@ -34,6 +35,18 @@ public class ProductPageObject extends BasePage {
         sendKey(ProductPageUI.INPUT_LOCATOR,"hạ long" + randomNum());
         clickStringFormat(ProductPageUI.CLICK_CUSTOM_LOCATOR,"Lưu");
         sendKeyUpload(ProductPageUI.UPLOAD_PICTURES, GlobalConstant.LINK_PROJECT+"unnamed.jpg" + "\n" + GlobalConstant.LINK_PROJECT+ "test.jpg" + "\n" + GlobalConstant.LINK_PROJECT+"ĐỨC THẦN TÀI.png");
+        clickStringFormat(ProductPageUI.PROPERTIES_ITEMS,"Thuộc tính");
+        clickToElement(ProductPageUI.ADD_NEW_PROPERTIES);
+        clickToElement(ProductPageUI.OPEN_DROPDOWN_PROPERTIES);
+        clickStringFormat(ProductPageUI.PROPERTIES_CHOOSE,"SIZE");
+        sendKey(ProductPageUI.INPUT_VALUE_PROPERTIES,"12");
+        clickStringFormat(ProductPageUI.PROPERTIES_ITEMS,"Đơn vị tính ");
+        sendKey(ProductPageUI.NAME_ITEM_UNIT,"cái");
+        sendKey(ProductPageUI.PRICE_COST,"1200");
+        sendKey(ProductPageUI.INVENTORY,"50");
+        sendKey(ProductPageUI.PRICE_ITEMS_LIST,"2000");
+        clickToElement(ProductPageUI.SAVE_ITEMS);
+
     }
 
     public void getAllUploadPicture(List<String> elements,String locatorPicture){
@@ -42,9 +55,18 @@ public class ProductPageObject extends BasePage {
         }
     }
 
+
     public int randomNum(){
         Random rand = new Random();
         int random = rand.nextInt(1000);
         return random;
+    }
+
+    public void waitInTime(int time){
+        try {
+            Thread.sleep(time*1000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
     }
 }

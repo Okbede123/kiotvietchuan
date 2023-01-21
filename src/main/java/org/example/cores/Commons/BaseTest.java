@@ -113,4 +113,8 @@ public class BaseTest {
         }
     }
 
+    public WebDriver getDriver(){
+        return this.driver;
+    }
+
 }

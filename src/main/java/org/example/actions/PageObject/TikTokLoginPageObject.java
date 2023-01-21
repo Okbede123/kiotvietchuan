@@ -21,29 +21,21 @@ public class TikTokLoginPageObject extends BasePage {
     }
 
     public void sendEmailTextBox(String values){
-        if(BaseTest.getNameBrowser().equals("firefox")){
-            waitElementVisibility(TikTokPageLoginUI.TEXTBOX_EMAIL_FIREFOX);
-            sendKey(TikTokPageLoginUI.TEXTBOX_EMAIL_FIREFOX,values);
-        }
-        else {
-            waitElementVisibility(TikTokPageLoginUI.TEXTBOX_EMAIL_CHROME);
-            sendKey(TikTokPageLoginUI.TEXTBOX_EMAIL_CHROME,values);
-        }
+        if(isDisplayElement(TikTokPageLoginUI.TEXTBOX_EMAIL_VIETNAMESE)){
+            sendKey(TikTokPageLoginUI.TEXTBOX_EMAIL_VIETNAMESE,values);
 
+        } else if (isDisplayElement(TikTokPageLoginUI.TEXTBOX_PASSWORD_ENGLISH)){
+            sendKey(TikTokPageLoginUI.TEXTBOX_PASSWORD_ENGLISH,values);
+        }
 
     }
 
     public void sendPassTextBox(String values){
-        if(BaseTest.getNameBrowser().equals("firefox")){
-            waitElementVisibility(TikTokPageLoginUI.TEXTBOX_PASSWORD_FIREFOX);
-            sendKey(TikTokPageLoginUI.TEXTBOX_PASSWORD_FIREFOX,values);
+        if(isDisplayElement(TikTokPageLoginUI.TEXTBOX_PASSWORD_VIETNAMESE)){
+            sendKey(TikTokPageLoginUI.TEXTBOX_PASSWORD_VIETNAMESE,values);
+        } else if (isDisplayElement(TikTokPageLoginUI.TEXTBOX_PASSWORD_ENGLISH)) {
+            sendKey(TikTokPageLoginUI.TEXTBOX_PASSWORD_ENGLISH,values);
         }
-        else {
-            waitElementVisibility(TikTokPageLoginUI.TEXTBOX_PASSWORD_CHROME);
-            sendKey(TikTokPageLoginUI.TEXTBOX_PASSWORD_CHROME,values);
-        }
-
-
     }
 
     public void clickLogin(){

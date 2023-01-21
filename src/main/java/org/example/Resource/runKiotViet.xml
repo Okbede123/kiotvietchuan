@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <suite parallel = "false" name = "Tech Panda">
+
+    <listeners>
+        <listener class-name = "org.example.cores.Commons.ReportConfig.ExtentTestListener"/>
+    </listeners>
+
+
     <test name = "Run On Chrome">
         <parameter name = "browser" value = "chrome"/>
         <classes>
-            <class name = "org.example.Testcase.LoginToStore2" />
+            <class name = "org.example.Testcase.LogInStore" />
         </classes>
     </test>
 

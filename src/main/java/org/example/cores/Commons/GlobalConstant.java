@@ -1,7 +1,7 @@
 package org.example.cores.Commons;
 
 public class GlobalConstant {
-    public static String GETLINK = System.getProperty("user.dir");
+    public static String GETLINK_PROJECT = System.getProperty("user.dir");
 
     public static final String  NAME_STORE = "testz1" ;
 
@@ -13,5 +13,7 @@ public class GlobalConstant {
 
     public static final String LINK_URL_STORE = "https://testz1.kiotviet.vn/";
 
-    public static final String LINK_PROJECT = GETLINK +"\\src\\";
+    public static final String LINK_PROJECT = GETLINK_PROJECT +"\\src\\";
+
+    public static final String JAVA_VERSION = System.getProperty("java.version");
 }
