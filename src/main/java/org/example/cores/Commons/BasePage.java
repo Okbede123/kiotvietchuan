@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Cookie;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -15,6 +16,7 @@ import java.util.Set;
 public class BasePage extends BasePageDefault {
 
     WebDriver driver;
+
 
     public BasePage(WebDriver driver){
         super(driver);
@@ -69,6 +71,10 @@ public class BasePage extends BasePageDefault {
     }
 
 
+    public void moveMouseToElement(String locator){
+        waitElementVisibility(locator);
+        new Actions(driver).moveToElement(searchElement(locator)).perform();
+    }
 
 
     @Override

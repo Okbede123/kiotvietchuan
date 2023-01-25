@@ -7,7 +7,7 @@ import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 
 
-public class MyDashBoardPageObject extends BasePage {
+public class MyDashBoardPageObject extends HeaderPageObject {
 
     WebDriver driver;
 

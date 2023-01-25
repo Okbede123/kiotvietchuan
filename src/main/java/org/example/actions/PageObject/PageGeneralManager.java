@@ -32,4 +32,12 @@ public class PageGeneralManager  {
     public static ProductPageObject openCreateProduct(WebDriver driver){
         return new ProductPageObject(driver);
     }
+
+    public static CreateOrderPageObject openCreateOrderPage(WebDriver driver){
+        return new CreateOrderPageObject(driver);
+    }
+
+    public static SaleOrderPageObject openSaleOrderPage(WebDriver driver){
+        return new SaleOrderPageObject(driver);
+    }
 }

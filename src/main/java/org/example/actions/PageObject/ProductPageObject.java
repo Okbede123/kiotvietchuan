@@ -10,7 +10,7 @@ import org.openqa.selenium.WebElement;
 import java.util.List;
 import java.util.Random;
 
-public class ProductPageObject extends BasePage {
+public class ProductPageObject extends HeaderPageObject {
 
     WebDriver driver;
 
@@ -25,7 +25,7 @@ public class ProductPageObject extends BasePage {
     }
 
     public void inputInformationItem(){
-        sendKey(ProductPageUI.INPUT_NAME_ITEM,"vietnam");
+        sendKey(ProductPageUI.INPUT_NAME_ITEM,"okbede" + randomNum());
         waitInTime(2);
         clickToElement(ProductPageUI.GROUP_ITEMS);
         clickStringFormat(ProductPageUI.CHOOSE_GROUP,"áo phao");
@@ -46,8 +46,8 @@ public class ProductPageObject extends BasePage {
         sendKey(ProductPageUI.INVENTORY,"50");
         sendKey(ProductPageUI.PRICE_ITEMS_LIST,"2000");
         clickToElement(ProductPageUI.SAVE_ITEMS);
-
     }
+
 
     public void getAllUploadPicture(List<String> elements,String locatorPicture){
         for (String element:elements) {

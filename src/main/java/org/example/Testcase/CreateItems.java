@@ -40,6 +40,5 @@ public class CreateItems extends BaseTest {
         productPageObject = myDashBoardPageObject.clickToCreateProducts();
         productPageObject.clickToCreateHeader();
         productPageObject.inputInformationItem();
-
     }
 }

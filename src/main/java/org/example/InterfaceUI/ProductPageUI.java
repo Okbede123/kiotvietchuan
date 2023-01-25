@@ -18,7 +18,7 @@ public class ProductPageUI {
 
     public static final String CHOOSE_GROUP = "xpath=(//li[@class='k-item ng-scope']/span[text()='%s'])[2]";
 
-    public static final String CREATE_LOCATOR = "xpath=(//div[@class = 'input-group-append'])[2]/a";
+    public static final String CREATE_LOCATOR = "xpath=(//div[@class = 'input-group-append'])[2]";
 
     public static final String INPUT_LOCATOR = "xpath=//label[text() = 'Tên vị trí']//parent::div//following-sibling::div/input";
 

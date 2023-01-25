@@ -16,4 +16,6 @@ public class GlobalConstant {
     public static final String LINK_PROJECT = GETLINK_PROJECT +"\\src\\";
 
     public static final String JAVA_VERSION = System.getProperty("java.version");
+
+    public static final String ICON_LOADING = "xpath=//div[@class = 'k-loading-image']";
 }
