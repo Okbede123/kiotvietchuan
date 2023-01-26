@@ -1,9 +1,6 @@
 package org.example.cores.Commons;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.Cookie;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
@@ -70,6 +67,10 @@ public class BasePage extends BasePageDefault {
         new Select(searchElement(castString(locator,valueString))).selectByVisibleText(value);
     }
 
+    public void clickByJs(String locator){
+        ((JavascriptExecutor)driver).executeScript("arguments[0].click();",searchElement(locator));
+    }
+
 
     public void moveMouseToElement(String locator){
         waitElementVisibility(locator);
@@ -131,8 +132,9 @@ public class BasePage extends BasePageDefault {
         return searchElement(locator).isSelected();
     }
 
-    public List<WebElement> searchElements(String locator) {
-        return driver.findElements(getByLocator(locator));
+    public List<WebElement> searchElements(String locator,String... values) {
+        waitElementVisibility(castRestParameter(locator,values));
+        return driver.findElements(getByLocator(castRestParameter(locator,values)));
     }
 
     @Override
@@ -171,7 +173,6 @@ public class BasePage extends BasePageDefault {
 
     public void switchToWindowTabs(String titleexpected){
         Set<String> allId = getWindowHandles();
-        System.out.println(allId.size());
         if(allId.size() > 1){
             for (String id :allId) {
                 switchToId(id);
@@ -188,9 +189,18 @@ public class BasePage extends BasePageDefault {
                 switchToId(id);
                 String title = getTitles();
                 if(title.equals(titleexpected)){
-                    System.out.println("test dong 158");
                     break;
                 }
+            }
+        }
+    }
+
+    public void switchToWindowTabsById(){
+        String idPresent = getWindowHandle();
+        Set<String> allId = getWindowHandles();
+        for (String idWindow: allId) {
+            if(!idWindow.contains(idPresent)){
+                switchToId(idWindow);
             }
         }
     }

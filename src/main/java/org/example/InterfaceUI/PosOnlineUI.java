@@ -21,4 +21,9 @@ public class PosOnlineUI {
     public static final String TITLE_FBPOSONLINE = "KiotViet-Facebook";
 
     public static final String LOGIN_TIKTOKSELLER = "xpath=//button[text() = 'Đăng nhập']";
+
+    public static final String SETTING = "xpath=//a[contains(@href, 'setting')]";
+    public static final String SETTING_SYNC_BILLS = "xpath=(//span[text() = 'Mã đơn hàng %s']//parent::div//parent::div)[1]//parent::td//preceding-sibling::td//parent::tr//following-sibling::tr[@aria-rowindex = 3]//div[@class = 'd-flex flex-column order-item-detail']//div[@class = 'd-flex flex-wrap']/div//kv-ol-omni-sync-fail-action-cbb";
+    public static final String MAPPING_ITEMS = "xpath=//div[text() = 'Liên kết hàng hóa']";
+    public static final String CHOOSE_ITEM_TO_MAPPING = "xpath=//input[@placeholder = 'Chọn hàng hóa để liên kết']";
 }

@@ -25,8 +25,10 @@ public class ProductPageObject extends HeaderPageObject {
     }
 
     public void inputInformationItem(){
-        sendKey(ProductPageUI.INPUT_NAME_ITEM,"okbede" + randomNum());
-        waitInTime(2);
+        sleepintime(1);
+        clickToElement(ProductPageUI.INPUT_NAME_ITEM);
+        sendKey(ProductPageUI.INPUT_NAME_ITEM,"vietnam" + randomNum());
+        //sendKey(ProductPageUI.INPUT_NAME_ITEM,"vietnam" + randomNum());
         clickToElement(ProductPageUI.GROUP_ITEMS);
         clickStringFormat(ProductPageUI.CHOOSE_GROUP,"áo phao");
         clickToElement(ProductPageUI.TRADEMARK);

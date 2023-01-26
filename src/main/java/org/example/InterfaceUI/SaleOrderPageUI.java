@@ -6,5 +6,5 @@ public class SaleOrderPageUI {
 
     public static final String CODE_ITEMS = "xpath=//div/span[text() = '%s']";
 
-    public static final String OFF_POPUP = "xpath=//h1[@class = 'introjs-tooltip-title']//following-sibling::a";
+    public static final String OFF_POPUP = "xpath=//h3[@class = 'introjs-tooltip-text-header']";
 }

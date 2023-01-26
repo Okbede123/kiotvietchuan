@@ -54,4 +54,11 @@ public class PosOnlineObject extends BasePage {
         clickToElement(PosOnlineUI.LOGIN_TIKTOKSELLER);
         return PageGeneralManager.openTikTokSeller(driver);
     }
+
+    public void clickToMappingItems(String value){
+        clickStringFormat(PosOnlineUI.SETTING_SYNC_BILLS,value);
+        clickToElement(PosOnlineUI.MAPPING_ITEMS);
+        switchToWindowTabsById();
+        sendKey(PosOnlineUI.CHOOSE_ITEM_TO_MAPPING,"ok");
+    }
 }
