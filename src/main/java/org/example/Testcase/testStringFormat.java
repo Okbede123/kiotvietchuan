@@ -1,9 +1,48 @@
 package org.example.Testcase;
 
+import org.testng.annotations.*;
+
 public class testStringFormat {
 
-    public static void main(String[] args) {
-        String x = "okbede %s";
-        System.out.println(String.format(x,"asd"));
+    @BeforeClass
+    public void TC_Prepare(){
+        System.out.println("prepare");
     }
+
+
+    @Test
+    public void TC_01(){
+        System.out.println("1");
+    }
+
+    @Test
+    public void TC_02(){
+        System.out.println("2");
+    }
+
+    @Test
+    public void TC_03(){
+        System.out.println("3");
+    }
+
+    @BeforeMethod
+    public void testMethodBefore(){
+        System.out.println("method before");
+    }
+
+    @AfterMethod
+    public void testAfterMethod(){
+        System.out.println("method after");
+    }
+
+    @BeforeTest
+    public void testBefore(){
+        System.out.println("test before");
+    }
+
+    @AfterTest
+    public void testAfter(){
+        System.out.println("test after");
+    }
+
 }

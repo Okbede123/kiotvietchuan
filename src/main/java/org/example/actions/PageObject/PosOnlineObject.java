@@ -59,6 +59,6 @@ public class PosOnlineObject extends BasePage {
         clickStringFormat(PosOnlineUI.SETTING_SYNC_BILLS,value);
         clickToElement(PosOnlineUI.MAPPING_ITEMS);
         switchToWindowTabsById();
-        sendKey(PosOnlineUI.CHOOSE_ITEM_TO_MAPPING,"ok");
+        sendKey(PosOnlineUI.CHOOSE_ITEM_TO_MAPPING,"okbede");
     }
 }
