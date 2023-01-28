@@ -36,7 +36,7 @@ public class ProductPageObject extends HeaderPageObject {
         clickToElement(ProductPageUI.CREATE_LOCATOR);
         sendKey(ProductPageUI.INPUT_LOCATOR,"hạ long" + randomNum());
         clickStringFormat(ProductPageUI.CLICK_CUSTOM_LOCATOR,"Lưu");
-        sendKeyUpload(ProductPageUI.UPLOAD_PICTURES, GlobalConstant.LINK_PROJECT+"unnamed.jpg" + "\n" + GlobalConstant.LINK_PROJECT+ "test.jpg" + "\n" + GlobalConstant.LINK_PROJECT+"ĐỨC THẦN TÀI.png");
+        sendKeyUpload(GlobalConstant.UPLOAD_PICTURES, GlobalConstant.LINK_PROJECT+"unnamed.jpg" + "\n" + GlobalConstant.LINK_PROJECT+ "test.jpg" + "\n" + GlobalConstant.LINK_PROJECT+"ĐỨC THẦN TÀI.png");
         clickStringFormat(ProductPageUI.PROPERTIES_ITEMS,"Thuộc tính");
         clickToElement(ProductPageUI.ADD_NEW_PROPERTIES);
         clickToElement(ProductPageUI.OPEN_DROPDOWN_PROPERTIES);
@@ -58,17 +58,4 @@ public class ProductPageObject extends HeaderPageObject {
     }
 
 
-    public int randomNum(){
-        Random rand = new Random();
-        int random = rand.nextInt(1000);
-        return random;
-    }
-
-    public void waitInTime(int time){
-        try {
-            Thread.sleep(time*1000);
-        } catch (InterruptedException e) {
-            throw new RuntimeException(e);
-        }
-    }
 }

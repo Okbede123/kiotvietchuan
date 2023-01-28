@@ -17,5 +17,7 @@ public class GlobalConstant {
 
     public static final String JAVA_VERSION = System.getProperty("java.version");
 
-    public static final String ICON_LOADING = "xpath=//div[@class = 'k-loading-image']";
+    public static final String ICON_LOADING = "xpath=(//div[@class = 'spinner--container'])[2]";
+
+    public static final String UPLOAD_PICTURES = "xpath=//input[@type = 'file']";
 }

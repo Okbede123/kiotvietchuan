@@ -10,7 +10,7 @@ public class CreateOrderPageUI {
 
     public static final String INPUT_LOCATOR = "xpath=//input[@placeholder = 'Chọn Tỉnh/TP - Quận/Huyện']";
 
-    public static final String LOCATOR_CHOOSE_LIST = "xpath=//li[@val = '%s']";
+    public static final String LOCATOR_CHOOSE_LIST = "xpath=//li[@ng-repeat = 'suggestion in suggestions track by $index']";
 
     public static final String SERVICE_SHIP = "xpath=//label[text() = 'Dịch vụ:']//parent::div/div/span/span";
 

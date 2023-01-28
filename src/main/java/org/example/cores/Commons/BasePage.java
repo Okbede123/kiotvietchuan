@@ -8,6 +8,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 import java.util.List;
+import java.util.Random;
 import java.util.Set;
 
 public class BasePage extends BasePageDefault {
@@ -56,6 +57,7 @@ public class BasePage extends BasePageDefault {
     }
 
     public void clickStringFormat(String locator,String value){
+        waitElementVisibility(castString(locator,value));
         clickToElement(castString(locator,value));
     }
 
@@ -68,13 +70,23 @@ public class BasePage extends BasePageDefault {
     }
 
     public void clickByJs(String locator){
+        waitElementVisibility(locator);
         ((JavascriptExecutor)driver).executeScript("arguments[0].click();",searchElement(locator));
     }
 
+    public void removeAttribute(String locator,String attributeRemove){
+        ((JavascriptExecutor)driver).executeScript("arguments[0].removeAttribute('"+attributeRemove+"')",searchElement(locator));
+    }
 
     public void moveMouseToElement(String locator){
         waitElementVisibility(locator);
         new Actions(driver).moveToElement(searchElement(locator)).perform();
+    }
+
+    public void moveMouseToElementStringFormat(String locator,String values){
+        waitElementVisibility(castRestParameter(locator,values));
+        System.out.println(castRestParameter(locator,values));
+        new Actions(driver).moveToElement(searchElement(castRestParameter(locator,values))).perform();
     }
 
 
@@ -253,5 +265,12 @@ public class BasePage extends BasePageDefault {
             throw new RuntimeException(e);
         }
     }
+
+    public int randomNum(){
+        Random rand = new Random();
+        int random = rand.nextInt(1000);
+        return random;
+    }
+
 
 }

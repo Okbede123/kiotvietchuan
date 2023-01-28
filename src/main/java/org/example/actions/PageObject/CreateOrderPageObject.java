@@ -25,10 +25,11 @@ public class CreateOrderPageObject extends HeaderPageObject {
 
     public void chooseLocator(String value){
         sendKey(CreateOrderPageUI.INPUT_LOCATOR, value);
-        for (WebElement e :searchElements(CreateOrderPageUI.LOCATOR_CHOOSE_LIST,"Hà Giang - Huyện Bắc Mê")){
+        for (WebElement e :searchElements(CreateOrderPageUI.LOCATOR_CHOOSE_LIST)){
             if(e.getAttribute("val").contains("Bắc Mê")){
                 e.click();
                 clickToElement(CreateOrderPageUI.INPUT_LOCATOR);
+                break;
             }
         }
     }

@@ -40,4 +40,8 @@ public class PageGeneralManager  {
     public static SaleOrderPageObject openSaleOrderPage(WebDriver driver){
         return new SaleOrderPageObject(driver);
     }
+
+    public static CustomerPageObject openCustomerPage(WebDriver driver){
+        return new CustomerPageObject(driver);
+    }
 }
