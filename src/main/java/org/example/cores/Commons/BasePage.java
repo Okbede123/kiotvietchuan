@@ -52,8 +52,12 @@ public class BasePage extends BasePageDefault {
        return driver.findElement(getByLocator(locator));
     }
 
-    public String castString(String locator,String value){
-        return locator = String.format(locator,value);
+    public WebElement searchElementStringFormat(String locator,String... values) {
+        return driver.findElement(getByLocator(castString(locator,values)));
+    }
+
+    public String castString(String locator,String... value){
+        return locator = String.format(locator,(Object[])value);
     }
 
     public void clickStringFormat(String locator,String value){
@@ -61,7 +65,8 @@ public class BasePage extends BasePageDefault {
         clickToElement(castString(locator,value));
     }
 
-    public void sendKeyStringFormat(String locator,String value,String valueSendkey){
+    public void sendKeyStringFormat(String locator,String valueSendkey,String...value){
+        waitElementVisibility(castString(locator,value));
         sendKey(castString(locator,value),valueSendkey);
     }
 
@@ -72,6 +77,11 @@ public class BasePage extends BasePageDefault {
     public void clickByJs(String locator){
         waitElementVisibility(locator);
         ((JavascriptExecutor)driver).executeScript("arguments[0].click();",searchElement(locator));
+    }
+
+    public void clickByJsStringFormat(String locator,String...values){
+        waitElementVisibilityStringFormat(castRestParameter(locator,values));
+        ((JavascriptExecutor)driver).executeScript("arguments[0].click();",searchElement(castRestParameter(locator,values)));
     }
 
     public void removeAttribute(String locator,String attributeRemove){
@@ -85,7 +95,6 @@ public class BasePage extends BasePageDefault {
 
     public void moveMouseToElementStringFormat(String locator,String values){
         waitElementVisibility(castRestParameter(locator,values));
-        System.out.println(castRestParameter(locator,values));
         new Actions(driver).moveToElement(searchElement(castRestParameter(locator,values))).perform();
     }
 
@@ -127,6 +136,10 @@ public class BasePage extends BasePageDefault {
     @Override
     public void waitElementVisibility(String locator) {
         new WebDriverWait(driver, Duration.ofSeconds(30)).until(ExpectedConditions.visibilityOfElementLocated(getByLocator(locator)));
+    }
+
+    public void waitElementVisibilityStringFormat(String locator,String... values) {
+        new WebDriverWait(driver, Duration.ofSeconds(30)).until(ExpectedConditions.visibilityOfElementLocated(getByLocator(castString(locator,values))));
     }
 
     @Override

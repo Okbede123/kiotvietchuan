@@ -5,10 +5,14 @@ import org.testng.annotations.*;
 public class testStringFormat {
 
     @BeforeClass
-    public void TC_Prepare(){
-        System.out.println("prepare");
+    public void TC_beforeclass(){
+        System.out.println("before class");
     }
 
+    @AfterClass
+    public void TC_AfterClass(){
+        System.out.println("after class");
+    }
 
     @Test
     public void TC_01(){

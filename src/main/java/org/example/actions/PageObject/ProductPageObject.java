@@ -4,6 +4,7 @@ import org.example.InterfaceUI.ProductPageUI;
 import org.example.cores.Commons.BasePage;
 import org.example.cores.Commons.GlobalConstant;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
@@ -13,6 +14,8 @@ import java.util.Random;
 public class ProductPageObject extends HeaderPageObject {
 
     WebDriver driver;
+
+    public static String getNameItem;
 
     public ProductPageObject(WebDriver driver) {
         super(driver);
@@ -25,10 +28,8 @@ public class ProductPageObject extends HeaderPageObject {
     }
 
     public void inputInformationItem(){
-        sleepintime(1);
-        clickToElement(ProductPageUI.INPUT_NAME_ITEM);
-        sendKey(ProductPageUI.INPUT_NAME_ITEM,"vietnam" + randomNum());
-        //sendKey(ProductPageUI.INPUT_NAME_ITEM,"vietnam" + randomNum());
+        int tempNameItem;
+        tempNameItem = randomNum();
         clickToElement(ProductPageUI.GROUP_ITEMS);
         clickStringFormat(ProductPageUI.CHOOSE_GROUP,"áo phao");
         clickToElement(ProductPageUI.TRADEMARK);
@@ -47,7 +48,10 @@ public class ProductPageObject extends HeaderPageObject {
         sendKey(ProductPageUI.PRICE_COST,"1200");
         sendKey(ProductPageUI.INVENTORY,"50");
         sendKey(ProductPageUI.PRICE_ITEMS_LIST,"2000");
+        sendKey(ProductPageUI.INPUT_NAME_ITEM,"vietnam" + tempNameItem);
+        getNameItem = "vietnam" + tempNameItem;
         clickToElement(ProductPageUI.SAVE_ITEMS);
+        waitElementVisibility(ProductPageUI.VERIFY_ITEM_CREATE_SUCCESSFUL);
     }
 
 
@@ -57,5 +61,22 @@ public class ProductPageObject extends HeaderPageObject {
         }
     }
 
+    public void searchNameItems(String value){
+        sendKey(ProductPageUI.FIND_NAME_ITEMS,value);
+        searchElement(ProductPageUI.FIND_NAME_ITEMS).sendKeys(Keys.ENTER);
+    }
+
+    public void mappingTikTokShop(){
+        clickToElement(ProductPageUI.MAPPING_ITEMS);
+        clickToElement(ProductPageUI.CLICK_TO_MAPPING_TIKTOKSHOP);
+        clickByJsStringFormat(ProductPageUI.MAPPING_TIKTOK,"An95 Store","7494627850020292845");
+        sendKeyStringFormat(ProductPageUI.INPUT_NAME_ITEM_OMMNI,"giấy","An95 Store","7494627850020292845");
+        clickByJsStringFormat(ProductPageUI.CHOOSE_ITEM_TIKTOK,"Gấu Trúc");
+        clickByJsStringFormat(ProductPageUI.DELETE_MAPPING_OMMNI,"An95 Store","7494627850020292845");
+    }
+
+    public String verifyNameItemMapping(){
+        return searchElementStringFormat(ProductPageUI.VERIFY_ITEM_MAPPING_OMNI,"Giấy Ăn Gấu Trúc Thùng 30 Gói (Hàng Việt Nam) - loại 1 - vàng").getText();
+    }
 
 }

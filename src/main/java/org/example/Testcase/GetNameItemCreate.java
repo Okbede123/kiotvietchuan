@@ -1,29 +1,24 @@
 package org.example.Testcase;
 
-import com.aventstack.extentreports.Status;
 import org.example.actions.PageObject.*;
 import org.example.cores.Commons.BaseTest;
-import org.example.cores.Commons.ReportConfig.ExtentManager;
 import org.openqa.selenium.WebDriver;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Parameters;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 
-import java.lang.reflect.Method;
+public class GetNameItemCreate extends BaseTest {
 
-public class CreateItems extends BaseTest {
     WebDriver driver;
+
     HomePageObject homePageObject;
     LoginPageObject loginPageObject;
     MyDashBoardPageObject myDashBoardPageObject;
     ProductPageObject productPageObject;
 
-
+    public static String nameItem;
 
     @Parameters({"browser"})
-    @BeforeClass
-    public void beforeClass(String browser){
+    @BeforeTest
+    public void beforeTest(String browser){
         driver = openBrowser(browser);
         homePageObject = PageGeneralManager.openHomePage(driver);
         homePageObject.getURl();
@@ -33,15 +28,11 @@ public class CreateItems extends BaseTest {
         loginPageObject.sendUserNameandPassWord();
         myDashBoardPageObject = loginPageObject.clickToManage();
         myDashBoardPageObject.verifyToDashBoard();
-    }
-
-    @Test
-    public void TC_01_CreateItem(Method method){
-        ExtentManager.startTest(method.getName(),"start Click CreateOrder");
-        ExtentManager.getTest().log(Status.INFO,"input information");
         productPageObject = myDashBoardPageObject.clickToCreateProducts();
         productPageObject.clickToCreateHeader();
         productPageObject.inputInformationItem();
+        nameItem = ProductPageObject.getNameItem;
+        driver.quit();
     }
 
 }

@@ -1,6 +1,7 @@
 package org.example.Testcase;
 
 import com.aventstack.extentreports.Status;
+import org.example.InterfaceUI.SaleOrderPageUI;
 import org.example.actions.PageObject.*;
 import org.example.cores.Commons.BaseTest;
 import org.example.cores.Commons.ReportConfig.ExtentManager;
@@ -8,6 +9,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
@@ -75,5 +77,14 @@ public class CreateOrder extends BaseTest {
        saleOrderPageObject.sendNameToOrdersHandleToolTip("okbede","SP9934430182");
        saleOrderPageObject.inputItemsInformation("5","7600");
        saleOrderPageObject.sendNameToOrders("okbede","SP9934430183");
+       saleOrderPageObject.inputNoteBill("giao hang can than");
+       saleOrderPageObject.searchCustomerandChoosePrice("Vũ Minh Đức","0563886668","test","Hà Giang - Thành phố Hà Giang","Phường Minh Khai");
+       saleOrderPageObject.inputInformationBill("10000");
+       verifyTrue(saleOrderPageObject.verifyCheckBoxShipper());
+       verifyTrue(saleOrderPageObject.verifyCheckBoxPriceDeclaration());
+       verifyTrue(saleOrderPageObject.verifyRadioBoxPaidReceipents());
+       verifyTrue(saleOrderPageObject.verifyCheckBoxCollectMoneyToSeeItem());
+       verifyEqual(saleOrderPageObject.verifyletTryItems(),"Cho thử hàng");
+       //Assert.assertEquals(saleOrderPageObject.verifyletTryItems(),"Cho thử hàng");
     }
 }
