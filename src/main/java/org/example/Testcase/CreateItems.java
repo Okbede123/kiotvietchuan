@@ -38,7 +38,7 @@ public class CreateItems extends BaseTest {
     public void TC_01_CreateItem(Method method){
         ExtentManager.startTest(method.getName(),"start Click CreateOrder");
         ExtentManager.getTest().log(Status.INFO,"input information");
-        productPageObject = myDashBoardPageObject.clickToCreateProducts();
+        productPageObject = myDashBoardPageObject.openHeaderPageObject().clickToCreateProductsFromHeader();
         productPageObject.clickToCreateHeader();
         productPageObject.inputInformationItem();
     }

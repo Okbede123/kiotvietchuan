@@ -28,7 +28,7 @@ public class GetNameItemCreate extends BaseTest {
         loginPageObject.sendUserNameandPassWord();
         myDashBoardPageObject = loginPageObject.clickToManage();
         myDashBoardPageObject.verifyToDashBoard();
-        productPageObject = myDashBoardPageObject.clickToCreateProducts();
+        productPageObject = myDashBoardPageObject.openHeaderPageObject().clickToCreateProductsFromHeader();
         productPageObject.clickToCreateHeader();
         productPageObject.inputInformationItem();
         nameItem = ProductPageObject.getNameItem;

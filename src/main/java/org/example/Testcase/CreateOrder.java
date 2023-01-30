@@ -36,7 +36,7 @@ public class CreateOrder extends BaseTest {
     public void TC_01_EditOrderBill(Method method){
         ExtentManager.startTest(method.getName(),"start Click EditOrder");
         ExtentManager.getTest().log(Status.INFO,"click to edit order");
-        createOrderPageObject = myDashBoardPageObject.clickToCreateOrder();
+        createOrderPageObject = myDashBoardPageObject.getHeaderPageObject().clickToCreateOrder();
         createOrderPageObject.clickToDetailBillOrder("DHLZD_392562693522882","123123");
         createOrderPageObject.chooseLocator("Hà ");
         createOrderPageObject.chooseServiceShip("Giao nhanh");
@@ -46,7 +46,8 @@ public class CreateOrder extends BaseTest {
     public void TC_02_GoToMappingItems(Method method){
         ExtentManager.startTest(method.getName(),"Tc2 start Click CreateOrder");
         ExtentManager.getTest().log(Status.INFO,"click to create order");
-        createOrderPageObject = myDashBoardPageObject.clickToCreateOrder();
+        //createOrderPageObject = myDashBoardPageObject.clickToCreateOrder();
+        createOrderPageObject = myDashBoardPageObject.getHeaderPageObject().clickToCreateOrder();
         posOnlineObject = createOrderPageObject.clickToPosOnlineMappingItems();
         posOnlineObject.checkFBPosDisplay();
         posOnlineObject.clickToMappingItems("DHLZD_392631083006490");
@@ -57,15 +58,15 @@ public class CreateOrder extends BaseTest {
     public void TC_03_GoToMyDashBoardFromCreateOrder(Method method){
         ExtentManager.startTest(method.getName(),"Tc2 start Click CreateOrder");
         ExtentManager.getTest().log(Status.INFO,"click to create order");
-        createOrderPageObject = myDashBoardPageObject.clickToCreateOrder();
-        myDashBoardPageObject = createOrderPageObject.clickToMyDashBoard();
+        createOrderPageObject = myDashBoardPageObject.getHeaderPageObject().clickToCreateOrder();
+        myDashBoardPageObject = createOrderPageObject.getHeaderPageObject().clickToMyDashBoard();
     }
 
     @Test
     public void TC_04_CreateOrderBills(Method method){
         ExtentManager.startTest(method.getName(),"start Click CreateOrder");
         ExtentManager.getTest().log(Status.INFO,"click to create order");
-        createOrderPageObject = myDashBoardPageObject.clickToCreateOrder();
+        createOrderPageObject = myDashBoardPageObject.openHeaderPageObject().clickToCreateOrder();
        saleOrderPageObject = createOrderPageObject.clickCreateOrder();
        saleOrderPageObject.turnOffToolTip();
        saleOrderPageObject.sendNameToOrdersHandleToolTip("okbede","SP9934430182");

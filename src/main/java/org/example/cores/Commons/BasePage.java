@@ -1,5 +1,7 @@
 package org.example.cores.Commons;
 
+import org.example.actions.PageObject.HeaderPageObject;
+import org.example.actions.PageObject.PageGeneralManager;
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -39,6 +41,10 @@ public class BasePage extends BasePageDefault {
         WebElement element = searchElement(locator);
         element.clear();
         element.sendKeys(value);
+    }
+
+    public HeaderPageObject getHeaderPageObject(){
+        return new HeaderPageObject(driver);
     }
 
     public void sendKeyUpload(String locator, String value) {

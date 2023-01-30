@@ -35,7 +35,7 @@ public class MappingItems extends BaseTest {
     public void TC_01_MappingItems(Method method){
         ExtentManager.startTest(method.getName(),"start Mapping items");
         ExtentManager.getTest().log(Status.INFO,"TC_01_MappingItems");
-        productPageObject = myDashBoardPageObject.clickToCreateProducts();
+        productPageObject = myDashBoardPageObject.getHeaderPageObject().clickToCreateProductsFromHeader();
         productPageObject.searchNameItems(GetNameItemCreate.nameItem);
         productPageObject.mappingTikTokShop();
         verifyEqual(productPageObject.verifyNameItemMapping(),"Giấy Ăn Gấu Trúc Thùng 30 Gói (Hàng Việt Nam) - loại 1 - vàng");

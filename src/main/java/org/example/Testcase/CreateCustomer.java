@@ -33,7 +33,7 @@ public class CreateCustomer extends BaseTest {
     public void TC_01_CreateCustomer(Method method){
         ExtentManager.startTest(method.getName(),"start Click CreateCustomer");
         ExtentManager.getTest().log(Status.INFO,"click to create customer");
-        customerPageObject = myDashBoardPageObject.clickToCustomer();
+        customerPageObject = myDashBoardPageObject.openHeaderPageObject().clickToCustomer();
         customerPageObject.createCustomer();
         customerPageObject.inputInfomationCustomer("than tai","0812675","Nam","hà","Đồng Văn","xã","Lũng Cú");
 
