@@ -1,7 +1,6 @@
 package org.example.actions.PageObject;
 
 
-import org.example.cores.Commons.BasePage;
 import org.example.InterfaceUI.MyDashBoardUI;
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;

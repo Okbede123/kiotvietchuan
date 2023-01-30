@@ -43,7 +43,7 @@ public class BaseTest {
     }
 
     public WebDriver openBrowser(String browser){
-        System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"\\src\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", GlobalConstant.LINK_PROJECT+"chromedriver.exe");
         switch (browser){
             case "firefox":{
                 driver = new FirefoxDriver();

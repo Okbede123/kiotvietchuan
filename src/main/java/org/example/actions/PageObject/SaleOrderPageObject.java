@@ -3,10 +3,7 @@ package org.example.actions.PageObject;
 import org.example.InterfaceUI.SaleOrderPageUI;
 import org.example.cores.Commons.BasePage;
 import org.example.cores.Commons.GlobalConstant;
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 
 public class SaleOrderPageObject extends BasePage {
     WebDriver driver;

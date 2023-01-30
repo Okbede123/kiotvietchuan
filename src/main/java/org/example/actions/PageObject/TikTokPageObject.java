@@ -3,7 +3,6 @@ package org.example.actions.PageObject;
 
 import org.example.cores.Commons.BasePage;
 import org.example.InterfaceUI.TikTokPageUI;
-import org.example.cores.Commons.BaseTest;
 import org.openqa.selenium.WebDriver;
 
 public class TikTokPageObject extends BasePage {

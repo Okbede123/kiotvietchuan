@@ -1,15 +1,11 @@
 package org.example.actions.PageObject;
 
 import org.example.InterfaceUI.ProductPageUI;
-import org.example.cores.Commons.BasePage;
 import org.example.cores.Commons.GlobalConstant;
-import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 
 import java.util.List;
-import java.util.Random;
 
 public class ProductPageObject extends HeaderPageObject {
 

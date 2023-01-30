@@ -1,21 +1,15 @@
 package org.example.Testcase;
 
 import com.aventstack.extentreports.Status;
-import org.example.InterfaceUI.SaleOrderPageUI;
 import org.example.actions.PageObject.*;
 import org.example.cores.Commons.BaseTest;
 import org.example.cores.Commons.ReportConfig.ExtentManager;
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
-import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import java.lang.reflect.Method;
-import java.security.Key;
 
 public class CreateOrder extends BaseTest {
 
@@ -85,6 +79,5 @@ public class CreateOrder extends BaseTest {
        verifyTrue(saleOrderPageObject.verifyRadioBoxPaidReceipents());
        verifyTrue(saleOrderPageObject.verifyCheckBoxCollectMoneyToSeeItem());
        verifyEqual(saleOrderPageObject.verifyletTryItems(),"Cho thử hàng");
-       //Assert.assertEquals(saleOrderPageObject.verifyletTryItems(),"Cho thử hàng");
     }
 }
