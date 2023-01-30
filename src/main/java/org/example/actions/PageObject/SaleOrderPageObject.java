@@ -34,11 +34,11 @@ public class SaleOrderPageObject extends BasePage {
         clickByJsStringFormat(SaleOrderPageUI.CLICK_CUSTOMER,value);
         clickByJs(SaleOrderPageUI.CHOOSE_PRICE_LIST);
         clickByJs(SaleOrderPageUI.CHOOSE_PRICE_FROM_LIST);
-        sendKeyStringFormat(SaleOrderPageUI.INPUT_LOCATOR_INFORMATION,"Điện thoại",contactNumber);
-        sendKeyStringFormat(SaleOrderPageUI.INPUT_LOCATOR_INFORMATION,"Địa chỉ",address);
-        sendKeyStringFormat(SaleOrderPageUI.INPUT_LOCATOR_INFORMATION,"Khu vực",locator);
+        sendKeyStringFormat(SaleOrderPageUI.INPUT_LOCATOR_INFORMATION,contactNumber,"Điện thoại");
+        sendKeyStringFormat(SaleOrderPageUI.INPUT_LOCATOR_INFORMATION,address,"Địa chỉ");
+        sendKeyStringFormat(SaleOrderPageUI.INPUT_LOCATOR_INFORMATION,locator,"Khu vực");
         sleepintime(1);
-        sendKeyStringFormat(SaleOrderPageUI.INPUT_LOCATOR_INFORMATION,"Phường xã",ward);
+        sendKeyStringFormat(SaleOrderPageUI.INPUT_LOCATOR_INFORMATION,ward,"Phường xã");
         clickByJs(SaleOrderPageUI.CHOOSE_WEIGHT_ITEMS_LIST);
         clickByJsStringFormat(SaleOrderPageUI.CHOOSE_WEIGHT_ITEMS,"kg");
         sendKey(SaleOrderPageUI.INPUT_WEIGHT_ITEMS,"2");
