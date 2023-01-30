@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="ae8ad382-ea2e-4a8e-a14b-78f81c9a8c31" name="Changes" comment="build 30/1/2023 master 1" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master2" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2KFq5P3pWxcM1IiaYmQ97Gj2Xbr" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/duc.vm4/IdeaProjects/kiotvietchuan1/src/Library/ExtentReportV5/rxjava-3.0.4.jar",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.lookFeel"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\duc.vm4\IdeaProjects\kiotvietchuan1\src\main\java\org\example\Resource" />
+      <recent name="C:\Users\duc.vm4\IdeaProjects\kiotvietchuan1" />
+    </key>
+  </component>
+  <component name="RunManager" selected="TestNG.C:/Users/duc.vm4/IdeaProjects/kiotvietchuan1/src/Main/java/org/example/Resource/CreateItems.xml">
+    <configuration default="true" type="JetRunConfigurationType">
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="C:/Users/duc.vm4/IdeaProjects/kiotvietchuan1/src/Main/java/org/example/Resource/CreateItems.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="testkiotviet" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/src/Main/java/org/example/Resource/CreateItems.xml" />
+      <option name="TEST_OBJECT" value="SUITE" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="C:/Users/duc.vm4/IdeaProjects/kiotvietchuan1/src/main/java/org/example/Resource/CreateItems.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="testkiotviet" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/src/main/java/org/example/Resource/CreateItems.xml" />
+      <option name="TEST_OBJECT" value="SUITE" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="C:/Users/duc.vm4/IdeaProjects/kiotvietchuan1/src/main/java/org/example/Resource/CreateOrders.xml" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="testkiotviet" />
+      <option name="SUITE_NAME" value="$PROJECT_DIR$/src/main/java/org/example/Resource/CreateOrders.xml" />
+      <option name="TEST_OBJECT" value="SUITE" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="testkiotviet" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.Testcase.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example.Testcase" />
+      <option name="MAIN_CLASS_NAME" value="org.example.Testcase.Main" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Test" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="testkiotviet" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.Testcase.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example.Testcase" />
+      <option name="MAIN_CLASS_NAME" value="org.example.Testcase.Test" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="TestNG.C:/Users/duc.vm4/IdeaProjects/kiotvietchuan1/src/Main/java/org/example/Resource/CreateItems.xml" />
+        <item itemvalue="TestNG.testStringFormat" />
+        <item itemvalue="TestNG.C:/Users/duc.vm4/IdeaProjects/kiotvietchuan1/src/main/java/org/example/Resource/CreateOrders.xml" />
+        <item itemvalue="TestNG.C:/Users/duc.vm4/IdeaProjects/kiotvietchuan1/src/main/java/org/example/Resource/CreateItems.xml" />
+        <item itemvalue="TestNG.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="ae8ad382-ea2e-4a8e-a14b-78f81c9a8c31" name="Changes" comment="" />
+      <created>1673580494643</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1673580494643</updated>
+    </task>
+    <task id="LOCAL-00001" summary="build 13/1/2023 master">
+      <created>1673582169607</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1673582169607</updated>
+    </task>
+    <task id="LOCAL-00002" summary="build 13/1/2023 master 2">
+      <created>1673582249985</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1673582249985</updated>
+    </task>
+    <task id="LOCAL-00003" summary="build 13/1/2023 master 3">
+      <created>1673593415523</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1673593415523</updated>
+    </task>
+    <task id="LOCAL-00004" summary="build 19/1/2023 master 1">
+      <created>1674110269903</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1674110269903</updated>
+    </task>
+    <task id="LOCAL-00005" summary="build 27/1/2023 master 1">
+      <created>1674814303144</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1674814303145</updated>
+    </task>
+    <task id="LOCAL-00006" summary="build 30/1/2023 master 1">
+      <created>1675053268836</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1675053268837</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="build 13/1/2023 master" />
+    <MESSAGE value="build 13/1/2023 master 2" />
+    <MESSAGE value="build 13/1/2023 master 3" />
+    <MESSAGE value="build 19/1/2023 master 1" />
+    <MESSAGE value="build 27/1/2023 master 1" />
+    <MESSAGE value="build 30/1/2023 master 1" />
+    <option name="LAST_COMMIT_MESSAGE" value="build 30/1/2023 master 1" />
+  </component>
+</project>
