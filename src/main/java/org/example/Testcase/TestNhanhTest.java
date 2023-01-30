@@ -4,6 +4,7 @@ public class TestNhanhTest {
     public static void main(String[] args) {
 
         System.out.println("test nhanh test");
-        System.out.println("them dong thu 2 tu nhanhDuc");
+        System.out.println("them dong thu 2 tu nhanhTest");
+        System.out.println("them dong thu 3 tu nhanhDuc");
     }
 }
