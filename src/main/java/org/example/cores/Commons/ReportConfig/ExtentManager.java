@@ -17,7 +17,7 @@ public class ExtentManager {
     public static ExtentReports extent = ExtentManager.createExtentReports();
 
     public synchronized static ExtentReports createExtentReports() {
-        ExtentSparkReporter reporter = new ExtentSparkReporter(GlobalConstant.GETLINK_PROJECT + "/src/htmlExtent/ExtentReport.html");
+        ExtentSparkReporter reporter = new ExtentSparkReporter(GlobalConstant.GETLINK_PROJECT + "/src/HtmlExtent/ExtentReport.html");
         reporter.config().setReportName("KiotViet HTML Report");
         reporter.config().setDocumentTitle("KiotViet HTML Report");
         reporter.config().setTimelineEnabled(true);
