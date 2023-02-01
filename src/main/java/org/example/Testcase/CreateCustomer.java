@@ -36,6 +36,5 @@ public class CreateCustomer extends BaseTest {
         customerPageObject = myDashBoardPageObject.openHeaderPageObject().clickToCustomer();
         customerPageObject.createCustomer();
         customerPageObject.inputInfomationCustomer("than tai","0812675","Nam","hà","Đồng Văn","xã","Lũng Cú");
-
     }
 }
