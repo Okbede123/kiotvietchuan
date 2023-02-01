@@ -5,6 +5,7 @@ import org.example.actions.PageObject.*;
 import org.example.cores.Commons.BaseTest;
 import org.example.cores.Commons.ReportConfig.ExtentManager;
 import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
@@ -79,6 +80,7 @@ public class CreateOrder extends BaseTest {
        verifyTrue(saleOrderPageObject.verifyCheckBoxPriceDeclaration());
        verifyTrue(saleOrderPageObject.verifyRadioBoxPaidReceipents());
        verifyTrue(saleOrderPageObject.verifyCheckBoxCollectMoneyToSeeItem());
-       verifyEqual(saleOrderPageObject.verifyletTryItems(),"Cho thử hàng");
+       Assert.assertEquals(saleOrderPageObject.verifyletTryItems(),"Cho thử hàngg");
+       //verifyEqual(saleOrderPageObject.verifyletTryItems(),"Cho thử hàngg");
     }
 }
